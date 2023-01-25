@@ -23,12 +23,12 @@ export default function NavBar() {
             <div className='sm:hidden flex flex-1 justify-end items-center'>
                 <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain" onClick={() => setToggle((prev) => !prev)} />
 
-                <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
+                <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-[-20px] right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
                     <ul className='list-none flex flex-col justify-end items-center flex-1'>
                         {
                             navLinks.map((el, index) => {
                                 return (
-                                    <li key={el.id} className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white`}>
+                                    <li key={el.id} className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mb-0' : 'mb-4'} text-white`}>
                                         <a href={`#${el.id}`}>
                                             {el.title}
                                         </a>
